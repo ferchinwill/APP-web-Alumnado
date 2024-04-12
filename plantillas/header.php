@@ -4,9 +4,9 @@ require 'dbcon.php';
 
 
 if (!isset($_SESSION['usuario_name'])) {
-	// Si no ha iniciado sesión, redirige al formulario de inicio de sesión
-	header('Location: /login.php');
-	exit();
+    // Si no ha iniciado sesión, redirige al formulario de inicio de sesión
+    header('Location: /login.php');
+    exit();
 }
 
 // Imprime el nombre del usuario
@@ -33,8 +33,20 @@ $nombre_usuario = $_SESSION['usuario_name'];
             <button class="  navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
 
+
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav " style="padding-top: 30px; padding-left: 25px;">
+                    <li class="nav-item">
+                        <a class="nav-link active py-" href="plantillas.html" aria-current="page">
+                            <span class="visually-hidden">(current)</span></a>
+                    </li>
+                   
+
+
+                </ul>
                 <style>
                     .bi-facebook:hover {
                         color: #2e00fd;
@@ -65,10 +77,33 @@ $nombre_usuario = $_SESSION['usuario_name'];
                 </style>
                 <div class="ms-auto" style="padding-top: 30px;">
                     <div class="d-inline-block me-2">
-
+                    <li class="nav-item dropdown btn btn-light  " >
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                            Alumnado
+                        </a>
+                        <ul class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Registros</a></li>
+                            <li><a class="dropdown-item" href="#">Matriculas</a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                        </ul>
+                    </li>
                     </div>
                     <div class="d-inline-block me-2 ">
 
+                    <li class="nav-item dropdown btn btn-light  " >
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                            Personal
+                        </a>
+                        <ul class="dropdown-menu  " aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Personal Administrativo</a></li>
+                            <li><a class="dropdown-item" href="#">Personal Auxiliar</a></li>
+                            <li><a class="dropdown-item" href="#">Personal de limpieza</a></li>
+                            <li><a class="dropdown-item" href="#">Docentes y Investigadores</a></li>
+                            <li><a class="dropdown-item" href="#">Auxiliares de Servicio Social</a></li>
+                        </ul>
+                    </li>
                     </div>
                     <div class="d-inline-block me-2">
                         <li class="nav-item dropdown  btn btn-light" style="list-style: none;">
@@ -79,7 +114,7 @@ $nombre_usuario = $_SESSION['usuario_name'];
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li>
                                     <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                       Integrantes del equipo
+                                        Integrantes del equipo
                                     </a>
                                 </li>
 
