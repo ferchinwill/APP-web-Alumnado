@@ -19,7 +19,7 @@ session_start();
 <body>
     <?php include('plantillas/header.php'); ?>
     <div class="container mt-5">
-
+        
         <?php include('message.php'); ?>
 
         <div class="row">

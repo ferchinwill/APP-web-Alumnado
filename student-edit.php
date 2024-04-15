@@ -47,16 +47,16 @@ require 'dbcon.php';
                                     <div class="mb-3">
                                         <label>Grado</label>
 
-                                        <select class="form-select" name="Grado" value="<?= $student['Grado']; ?>" class="form-control">
-                                            <option>1º</option>
-                                            <option>2º</option>
-                                            <option>3º</option>
-                                            <option>4º</option>
-                                            <option>5º</option>
-                                            <option>6º</option>
-                                            <option>7º</option>
-                                            <option>8º</option>
-                                            <option>9º</option>
+                                        <select class="form-select" name="Grado" class="form-control">
+                                            <option <?= ($student['Grado'] == '1º') ? 'selected' : ''; ?>>1º</option>
+                                            <option <?= ($student['Grado'] == '2º') ? 'selected' : ''; ?>>2º</option>
+                                            <option <?= ($student['Grado'] == '3º') ? 'selected' : ''; ?>>3º</option>
+                                            <option <?= ($student['Grado'] == '4º') ? 'selected' : ''; ?>>4º</option>
+                                            <option <?= ($student['Grado'] == '5º') ? 'selected' : ''; ?>>5º</option>
+                                            <option <?= ($student['Grado'] == '6º') ? 'selected' : ''; ?>>6º</option>
+                                            <option <?= ($student['Grado'] == '7º') ? 'selected' : ''; ?>>7º</option>
+                                            <option <?= ($student['Grado'] == '8º') ? 'selected' : ''; ?>>8º</option>
+                                            <option <?= ($student['Grado'] == '9º') ? 'selected' : ''; ?>>9º</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
@@ -80,12 +80,13 @@ require 'dbcon.php';
                                     </div>
                                     <div class="mb-3">
                                         <label>Curso</label>
-                                        <select class="form-select" name="carrera" id="carrera" value="<?= $student['carrera']; ?>">
-                                            <option>Ing.Negocios</option>
-                                            <option> Ing.Industrial </option>
-                                            <option> Ing.civil </option>
-                                            <option> Ing.Sist.Computacionales </option>
+                                        <select class="form-select" name="carrera" id="carrera">
+                                            <option <?= ($student['carrera'] == 'Ing.Negocios') ? 'selected' : ''; ?>>Ing.Negocios</option>
+                                            <option <?= ($student['carrera'] == 'Ing.Industrial') ? 'selected' : ''; ?>>Ing.Industrial</option>
+                                            <option <?= ($student['carrera'] == 'Ing.civil') ? 'selected' : ''; ?>>Ing.civil</option>
+                                            <option <?= ($student['carrera'] == 'Ing.Sist.Computacionales') ? 'selected' : ''; ?>>Ing.Sist.Computacionales</option>
                                         </select>
+
                                     </div>
                                     <div class="mb-3">
                                         <button type="submit" name="update_student" class="btn btn-primary">

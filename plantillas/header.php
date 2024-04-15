@@ -33,19 +33,12 @@ $nombre_usuario = $_SESSION['usuario_name'];
             <button class="  navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-
-
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav " style="padding-top: 30px; padding-left: 25px;">
                     <li class="nav-item">
                         <a class="nav-link active py-" href="plantillas.html" aria-current="page">
                             <span class="visually-hidden">(current)</span></a>
                     </li>
-                   
-
-
                 </ul>
                 <style>
                     .bi-facebook:hover {
@@ -77,7 +70,7 @@ $nombre_usuario = $_SESSION['usuario_name'];
                 </style>
                 <div class="ms-auto" style="padding-top: 30px;">
                     <div class="d-inline-block me-2">
-                    <li class="nav-item dropdown btn btn-light  " >
+                    <li class="nav-item dropdown btn btn-danger  " >
                         <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                             Alumnado
                         </a>
@@ -92,7 +85,7 @@ $nombre_usuario = $_SESSION['usuario_name'];
                     </div>
                     <div class="d-inline-block me-2 ">
 
-                    <li class="nav-item dropdown btn btn-light  " >
+                    <li class="nav-item dropdown btn btn-danger  " >
                         <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                             Personal
                         </a>
@@ -106,7 +99,7 @@ $nombre_usuario = $_SESSION['usuario_name'];
                     </li>
                     </div>
                     <div class="d-inline-block me-2">
-                        <li class="nav-item dropdown  btn btn-light" style="list-style: none;">
+                        <li class="nav-item dropdown  btn btn-danger" style="list-style: none;">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <?php echo "Bienvenido, $nombre_usuario!"; ?>
                             </a>

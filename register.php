@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
             $Contraseña = $_POST['Contraseña'];
 
             $sql_insert = "INSERT INTO registros (Correo, Nombre, Contraseña) VALUES ('$Correo', '$Nombre', '$Contraseña')";
+            $sql_insert = "INSERT INTO logins (Correo, Nombre, Contraseña) VALUES ('$Correo', '$Nombre', '$Contraseña')";
 
             if ($con->query($sql_insert) === TRUE) {
                 echo '
